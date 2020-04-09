@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+
+:root {
+	/* For percentages & todays */
+	--Lime-Green: hsl(163, 72%, 41%);
+	--Bright-Red: hsl(356, 69%, 56%);
+
+	/* For  Icons*/
+	--Facebook: hsl(195, 100%, 50%);
+	--Twitter: hsl(203, 89%, 53%);
+	--Instagram: yellowgreen;
+	--YouTube: hsl(348, 97%, 39%);
+
+	/* Dark theme */
+	--Very-Dark-Blue-bg: hsl(230, 17%, 14%);
+	--Very-Dark-Blue-top-bg-pattern: hsl(232, 19%, 15%);
+	--Dark-Desaturated-Blue-card-bg: hsl(228, 28%, 20%);
+	--Desaturated-Blue-text: hsl(228, 34%, 66%);
+	--White-font-text: hsl(0, 0%, 100%);
+
+	/* Light theme */
+	--White-BG: hsl(0, 0%, 100%);
+	--Very-Pale-Blue-top-bg-pattern: hsl(225, 100%, 98%);
+	--Light-Grayish-Blue-card-bg: hsl(227, 47%, 96%);
+	--Dark-Grayish-Blue-text: hsl(228, 12%, 44%);
+	--Very-Dark-Blue-text: hsl(230, 17%, 14%);
+
+	/*  Toggle */
+	--dark-theme-toggle: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+	--light-theme-toggle: hsl(230, 22%, 74%);
+
+	/* Font family */
+	--font-family: "Inter", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1.6;
+	color: #000;
+	font-size: 15px;
+	font-family: var(--font-family);
+	background-color: var(--Very-Dark-Blue-bg);
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+/* Utility Class*/
+.container {
+	max-width: 1440px;
+	margin: auto;
+	overflow: hidden;
+	padding: 1.8rem;
+}
+
+.heading-primary,
+.overview-today {
+	font-weight: 700;
+	font-size: 28px;
+	color: var(--White-font-text);
+}
+
+.overview-today {
+	font-size: 22px;
+	margin-bottom: 30px;
+}
+
+.heading-secondary {
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--Desaturated-Blue-text);
+	margin-bottom: 40px;
+}
+
+.facebook-logo,
+.twitter-logo,
+.instagram-logo,
+.youtube-logo {
+	height: 22px;
+	width: 22px;
+}
+
+
+.F-margin,
+.I-margin,
+.T-margin,
+.Y-margin {
+	margin-bottom: 40px;
+}
+
+.grid-followers-child .first-content span {
+	color: var(--Desaturated-Blue-text);
+	font-size: 12.5px;
+	font-weight: 700;
+	margin-left: 0.8rem;
+}
+
+.heading-followers-count,
+.heading-overview-count {
+	font-weight: 700;
+	color: var(--White-font-text);
+	font-size: 44px;
+}
+
+.heading-overview-count {
+	font-size: 28px;
+}
+
+.para-primary {
+	font-weight: 400;
+	color: var(--Desaturated-Blue-text);
+	font-size: 13.5px;
+	letter-spacing: 3px;
+	margin-bottom: 18px;
+}
+
+.up-logo,
+.down-logo {
+	height: 7px;
+}
+
+.green-text,
+.red-text {
+	font-size: 13px;
+	font-weight: 700;
+	color: var(--Lime-Green);
+	margin-left: 10px;
+}
+
+.red-text {
+	color: var(--Bright-Red);
+}
+
+.mode-text {
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--White-font-text);
+	margin-right: 10px;
+}
+
+/* Header section */
+.main-header {
+	width: 100%;
+	height: 250px;
+	background-color: var(--Very-Dark-Blue-top-bg-pattern);
+}
+
+.main-header .main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-header .main-nav .second-content {
+	display: flex;
+	align-items: center;
+}
+
+/*  Followers Section */
+.followers {
+	margin-top: -120px;
+}
+
+.grid-followers-parent {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.grid-followers-child {
+	background-color: var(--Dark-Desaturated-Blue-card-bg);
+	width: 100%;
+	height: 260px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.grid-followers-child:nth-child(1) {
+	border-top: 7px solid var(--Facebook);
+}
+
+.grid-followers-child:nth-child(2) {
+	border-top: 7px solid var(--Twitter);
+}
+
+.grid-followers-child:nth-child(3) {
+	border-top: 7px solid var(--Instagram);
+}
+
+.grid-followers-child:nth-child(4) {
+	border-top: 7px solid var(--YouTube);
+}
+
+.grid-followers-child:hover,
+.grid-overview-child:hover {
+	cursor: pointer;
+	background-color: rgb(26, 68, 90);
+}
+
+.grid-followers-child .first-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 6px;
+	text-align: center;
+}
+
+.grid-followers-child .third-content {
+	display: flex;
+	align-items: center;
+}
+
+/* Section Overview */
+.overview {
+	padding: 0.8rem 0;
+}
+
+
+.grid-overview-parent {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.grid-overview-child {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--Dark-Desaturated-Blue-card-bg);
+	width: 100%;
+	height: 180px;
+	padding: 0 1.6rem;
+	text-align: left;
+	border-radius: 5px;
+}
+
+.grid-overview-child .second-content {
+	text-align: right;
+}
+
+
+
+/* Toggle Button */
+.main-nav .second-content .checkbox {
+	height: 32px;
+	width: 75px;
+	margin-right: -75px;
+	z-index: 1;
+	opacity: 0;
+	cursor: pointer;
+}
+
+
+.main-nav .second-content .label {
+	position: relative;
+	height: 32px;
+	width: 75px;
+	background-color: rgb(190, 190, 238);
+	border-radius: 15px;
+	padding: 3px;
+}
+
+
+.main-nav .second-content .label .ball {
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	background-color: rgb(11, 28, 87);
+	top: 2.5px;
+	border-radius: 50%;
+	transition: transform 0.2s ease-in;
+}
+
+
+.ball-checked {
+	transform: translateX(41px);
+	/* background-color: yellow */
+}
+
+
+/* White theme color */
+.body-white-bg {
+	background-color: var(--White-BG);
+}
+
+.header-white-bg {
+	background-color: var(--Very-Pale-Blue-top-bg-pattern);
+}
+
+.followerscard-white-bg {
+	background-color: var(--Light-Grayish-Blue-card-bg);
+}
+
+.followerscard-white-bg:hover {
+	background-color: rgb(208, 229, 247);
+}
+
+.followerscard-white-bg .heading-followers-count {
+	color: var(--Very-Dark-Blue-text);
+}
+
+.overviewcard-white-bg {
+	background-color: var(--Light-Grayish-Blue-card-bg);
+}
+
+.overviewcard-white-bg .heading-overview-count {
+	color: var(--Very-Dark-Blue-text);
+}
+
+.overviewcard-white-bg:hover {
+	background-color: rgb(208, 229, 247);
+}
+
+.heading-color-black {
+	color: var(--Very-Dark-Blue-text);
+}
